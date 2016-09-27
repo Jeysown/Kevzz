@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+}
+html,body,#page, header { height:100%;}
+body{
+  padding:0;margin:0;
+  padding-top: 100px;
+  font-family: "Minion Pro";
+
+}
+/*hr*/
+.between{
+  margin-top: 0px;
+   margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #000;
+}
+.grid-item {
+  float: left;
+  padding: 10px 10px 10px 10px;
+background: #fff;
+box-shadow: 4px 4px 4px -4px rgba(0, 0, 0, .75);
+margin-bottom: 20px;
+
+}
+.footer {
+  width: 100%;
+}
+.footer1{
+  height: 150px;
+  background-color: #212121;
+  color: #4CAf50;
+
+}
+/* General sizing */
+ul.dropdown-lr {
+  width: 300px;
+}
+
+/* mobile fix */
+@media (max-width: 768px) {
+	.dropdown-lr h3 {
+		color: #eee;
+	}
+	.dropdown-lr label {
+		color: #eee;
+	}
+}
+
+.footer2 {
+  height: 80px;
+  background-color: #4CAf50;
+}
+.footer{
+  color: #fff;
+}
+.footer-text{
+  text-align: center;
+  padding-top: 10px;
+}
+.grid-item>h4{
+  font-weight: bold;
+  text-align: center;
+  padding: 4px;
+}
+.grid-item>i>h5{
+  display: inline;
+  padding-left: 5px;
+  font-weight: bold;
+}
+i>h3{
+  display: inline;
+  padding-left: 15px;
+
+}
+
+.jumbotron{
+  text-align: center;
+  background: transparent;
+}
+a{
+      color: #333;
+}
+a:hover{
+  color:#000;
+}
+/*Images*/
+.grid1 {
+
+}
+
+.grid1:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.navbar-inverse .navbar-brand{
+  color: #fff;
+}
+.collapse>.navbar-right>li>a{
+  color:#fff;
+}
+.navbar-inverse:hover .navbar-brand:hover {
+  color: #388E3C;
+}
+.collapse>.navbar-right>li>a:hover {
+  color:#388E3C;
+}
+.navbar-inverse{
+  background-color: #000;
+  border-color: #000;
+}
+
+.grid-sizer1,
+.grid-item1 {
+  width: 33.333%;
+}
+
+.grid-item1 {
+  float: left;
+  padding: 6px 8px 10px 8px; /*size of the frame*/
+/*give the frame's background colour a gradient*/
+background: #fff; /*fallback colour for browsers that don't support gradients*/
+
+-webkit-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+-moz-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+}
+
+.grid-item1 img {
+  display: block;
+  width: 100%;
+
+}
+
+   #map {
+     height: 590px;
+   }
+.bg {
+  background: url(../images/header.jpg);
+  height: 400px;
+position:relative;
+  top:0;
+  background-attachment:fixed;
+  overflow:hidden;
+  background-repeat: no-repeat;
+background-position:top center;
+background-size:100% 800px;
+margin-bottom: 20px;
+
+}
+.featurette-divider{
+  color:#848484;
+    border-top-color:#848484;
+}
+.jumbotron>hr{
+  border-top-color:#848484;
+  color:#848484;
+}
+.panel-primary>.panel-heading{
+    background-color: #388E3C;
+    border-color: #4CAF50;
+}
+.panel-primary{
+      border-color: #eeeeee;
+}
+.form-control{
+  margin-bottom: 10px;
+}
+.morris-hover{position:absolute;z-index:1000}.morris-hover.morris-default-style{border-radius:10px;padding:6px;color:#000;background:rgba(255,255,255,0.8);border:solid 2px rgba(230,230,230,0.8);font-family:sans-serif;font-size:12px;text-align:center}.morris-hover.morris-default-style .morris-hover-row-label{font-weight:bold;margin:0.25em 0}
+.morris-hover.morris-default-style .morris-hover-point{white-space:nowrap;margin:0.1em 0}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: #388e3c;
+}
+.bilang{
+  font-size: 100px;
+}
