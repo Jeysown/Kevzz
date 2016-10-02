@@ -17,7 +17,7 @@
     </div>
 
   </div>
-
+<?php print_r($prone)?>
   </body>
 </html>
 <?php include 'footer.php'; ?>
@@ -29,3 +29,5 @@
    </script>
 
   <script src="assets/js/prone-report.js" charset="utf-8"></script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+      </script>

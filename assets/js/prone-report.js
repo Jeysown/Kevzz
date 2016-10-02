@@ -26,6 +26,7 @@ for (i = 0; i < locations_prone.length; i++) {
       infowindow.open(map, marker);
     }
   })(marker, i));
+
     markers.push(marker);
 
 }
