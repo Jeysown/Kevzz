@@ -1,8 +1,8 @@
   var markers = [];
 
   var map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 9,
-  center: new google.maps.LatLng(14.8302664,121.1126421),
+  zoom: 13,
+  center: new google.maps.LatLng(14.5886329,121.0410704),
   mapTypeId: google.maps.MapTypeId.ROADMAP
 });
   var locations = [
