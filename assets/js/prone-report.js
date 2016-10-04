@@ -107,7 +107,6 @@
   var infowindow = new google.maps.InfoWindow();
   var marker, i,earthquake;
 
-
   for (i = 0; i < locations.length; i++) {
     marker = new google.maps.Marker({
        icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
