@@ -17,15 +17,14 @@
     </div>
 
   </div>
-<?php print_r($prone)?>
   </body>
 </html>
 <?php include 'footer.php'; ?>
 
   <script type="text/javascript">
 
-      var prone=<?php echo json_encode( $prone ) ?>;
-
+      var prone = <?php echo json_encode( $prone ) ?>;
+      
    </script>
 
   <script src="assets/js/prone-report.js" charset="utf-8"></script>

@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "accidents";
+$dbname = "mmda";
 $prone = array();
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 
 //all
 //safe
-$sql = "SELECT * FROM prone";
+$sql = "SELECT * FROM prone" ;
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

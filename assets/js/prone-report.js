@@ -10,10 +10,10 @@ var locations_prone = prone;
 
 
 var infowindow = new google.maps.InfoWindow();
-var marker, i;
+var marker;
 
 
-for (i = 0; i < locations_prone.length; i++) {
+for (var i = 0; i < locations_prone.length; i++) {
   marker = new google.maps.Marker({
     icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
     position: new google.maps.LatLng(locations_prone[i][0], locations_prone[i][1]),

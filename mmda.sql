@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2016 at 03:48 PM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Generation Time: Oct 04, 2016 at 04:53 AM
+-- Server version: 5.6.16
+-- PHP Version: 5.5.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `accidents`
+-- Database: `mmda`
 --
 
 -- --------------------------------------------------------
@@ -27,11 +27,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `prone` (
-`ID` int(12) NOT NULL,
+  `ID` int(12) NOT NULL AUTO_INCREMENT,
   `latitude` double NOT NULL,
   `longitude` double NOT NULL,
-  `location` varchar(60) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=latin1;
+  `location` varchar(60) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=99 ;
 
 --
 -- Dumping data for table `prone`
@@ -143,14 +144,15 @@ INSERT INTO `prone` (`ID`, `latitude`, `longitude`, `location`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `report` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `message` varchar(255) NOT NULL,
   `latitude` varchar(25) NOT NULL,
   `longitude` varchar(25) NOT NULL,
   `status` varchar(30) NOT NULL,
   `report_date` varchar(20) NOT NULL,
-  `report_time` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+  `report_time` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `report`
@@ -169,14 +171,15 @@ INSERT INTO `report` (`id`, `message`, `latitude`, `longitude`, `status`, `repor
 --
 
 CREATE TABLE IF NOT EXISTS `temporary` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `message` varchar(255) NOT NULL,
   `latitude` varchar(30) NOT NULL,
   `longitude` varchar(25) NOT NULL,
   `status` varchar(25) NOT NULL,
   `report_date` varchar(20) NOT NULL,
-  `report_time` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `report_time` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `temporary`
@@ -185,47 +188,32 @@ CREATE TABLE IF NOT EXISTS `temporary` (
 INSERT INTO `temporary` (`id`, `message`, `latitude`, `longitude`, `status`, `report_date`, `report_time`) VALUES
 (1, 'Awwwwwwwww', '15.0929081', '121.0613609', 'dadsa', '2015', '11:00');
 
---
--- Indexes for dumped tables
---
+-- --------------------------------------------------------
 
 --
--- Indexes for table `prone`
---
-ALTER TABLE `prone`
- ADD PRIMARY KEY (`ID`);
-
---
--- Indexes for table `report`
---
-ALTER TABLE `report`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `temporary`
---
-ALTER TABLE `temporary`
- ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- Table structure for table `users`
 --
 
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `fName` varchar(250) NOT NULL,
+  `lName` varchar(250) NOT NULL,
+  `mName` varchar(250) NOT NULL,
+  `emailAddress` varchar(250) NOT NULL,
+  `plateNumber` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
 --
--- AUTO_INCREMENT for table `prone`
+-- Dumping data for table `users`
 --
-ALTER TABLE `prone`
-MODIFY `ID` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=99;
---
--- AUTO_INCREMENT for table `report`
---
-ALTER TABLE `report`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `temporary`
---
-ALTER TABLE `temporary`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+
+INSERT INTO `users` (`id`, `username`, `password`, `fName`, `lName`, `mName`, `emailAddress`, `plateNumber`) VALUES
+(1, 'user1', '313debd0b750f6774a21b22783770ddc', 'Jose', 'Reyes', 'Perez', 'josereyes@gmail.com', 'DFG 789'),
+(3, 'winwin', '1cd13479e5609d79971c69051158a27f', 'Glenwin', 'Bernabe', 'Gonzalo', 'glenwinbernabe@gmail.com', 'WIN 018');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
