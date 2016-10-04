@@ -10,24 +10,15 @@
   </head>
   <body>
 <?php include 'header.php'; ?>
-    <?php include 'prone-report.php'; ?>
   <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 main" style="padding-right: 0px;padding-left: 0px;">
 
     <div class="map" id="map" style="margin-bottom:20px;">
     </div>
 
   </div>
-<?php print_r($prone)?>
+
   </body>
 </html>
 <?php include 'footer.php'; ?>
 
-  <script type="text/javascript">
-
-      var prone=<?php echo json_encode( $prone ) ?>;
-
-   </script>
-
   <script src="assets/js/prone-report.js" charset="utf-8"></script>
-  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-      </script>

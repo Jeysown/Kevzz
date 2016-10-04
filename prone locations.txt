@@ -1,11 +1,3 @@
-  var markers = [];
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 9,
-  center: new google.maps.LatLng(14.8302664,121.1126421),
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-});
-  var locations = [
 [2,14.694993,121.031444,'Quirino Highway'], 
 [3,14.645309,120.983548,'Rizal Avenue Extension'],
  [4,14.654633,120.957367,'C-4 Road'], 
@@ -103,22 +95,5 @@
  [96,14.7052654,121.0715684,'Commonwealth Ave.'], 
  [97,14.6342974,121.0417414,'EDSA'], 
  [98,14.6938539,121.0284684,'Quirino Highway']
-  ];
-  var infowindow = new google.maps.InfoWindow();
-  var marker, i,earthquake;
 
-
-  for (i = 0; i < locations.length; i++) {
-    marker = new google.maps.Marker({
-       icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
-      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-      map: map
-    });
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-      return function() {
-        infowindow.setContent("<b>Latitude: "+locations[i][1]+"<br>Longitude: "+locations[i][2]+"<br>Location: "+locations[i][3]+"</b>");
-        infowindow.open(map, marker);
-      }
-    })(marker, i));
-      markers.push(marker);
-  }
+ 
