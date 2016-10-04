@@ -16,21 +16,7 @@
     </div>
 
   </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> a673742b20b94059cd6ee57b95cb8015a8af9c3d
   </body>
 </html>
 <?php include 'footer.php'; ?>
-
-<<<<<<< HEAD
-=======
-  <script type="text/javascript">
-
-      var prone = <?php echo json_encode( $prone ) ?>;
-      
-   </script>
-
->>>>>>> a673742b20b94059cd6ee57b95cb8015a8af9c3d
   <script src="assets/js/prone-report.js" charset="utf-8"></script>
