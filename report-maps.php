@@ -18,8 +18,6 @@
 
   </div>
 
-  </body>
-</html>
     <?php include 'footer.php'; ?>
     <script type="text/javascript">
 

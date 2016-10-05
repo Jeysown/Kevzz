@@ -7,14 +7,13 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
   </button>
-  <a class="navbar-brand" href="index.php">Kevzzz</a>
+  <a class="navbar-brand" href="index.php">BeAlert</a>
 </div>
 <div id="navbar" class="navbar-collapse collapse">
   <ul class="nav navbar-nav navbar-right">
     <li><a href="index.php" style="cursor: pointer;">Reports</a></li>
-    <li><a href="report-maps.php" style="cursor: pointer;">Maps</a></li>
-    <li><a href="temporary-report.php">Temporary</a></li>
-    <li><a href="prone-maps.php">Prone</a></li>
+    <li><a href="temporary-report.php">Temporary Reports</a></li>
+    <li><a href="prone-maps.php">Prone Areas</a></li>
                     <li class="dropdown">
                                        <a href="http://phpoll.com/login" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
                                        <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">

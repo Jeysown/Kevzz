@@ -4,7 +4,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "mmda";
-$prone = array();
+$all = array();
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
      // output data of each row
 		 $j=0;
      while($row = $result->fetch_assoc()) {
-				 $prone[$j]=array($row["latitude"],$row["longitude"],$row["location"]);
+				 $all[$j]=array($row["latitude"],$row["longitude"],$row["location"]);
 				 $j++;
      }
 }

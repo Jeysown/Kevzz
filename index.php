@@ -11,18 +11,23 @@
   <body>
 <?php include 'header.php'; ?>
     <?php include 'report-access.php'; ?>
-    <div class="col-lg-12">
+  <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 main" style="padding-right: 0px;padding-left: 0px;">
+
+    <div class="map" id="map" style="margin-bottom:20px;">
+    </div>
+
+  </div>
+
       <div class="container">
         <div class="row">
-          <table class="table" id="tab1">
+          <table class="table" id="tab1" >
                   <thead>
                       <tr class="filters">
-                          <th><input type="text" class="form-control" placeholder="Status" ></th>
-                          <th><input type="text" class="form-control" placeholder="Date" ></th>
-                          <th><input type="text" class="form-control" placeholder="Time" ></th>
-                          <th><input type="text" class="form-control" placeholder="Latitude" ></th>
-                          <th><input type="text" class="form-control" placeholder="Longtitude" ></th>
-                          <th><input type="text" class="form-control" placeholder="Message" ></th>
+                          <th>Status</th>
+                          <th>Date</th>
+                          <th>Time</th>
+                          <th>Latitude and Longtitude</th>
+                          <th>Message</th>
                       </tr>
                   </thead>
                   <tbody>
@@ -36,8 +41,7 @@
                             $output .= "<td>" .$all[$i][0]. "</td>";
                             $output .= "<td>" .$all[$i][1]. "</td>";
                             $output .= "<td>" .$all[$i][2]. "</td>";
-                            $output .= "<td>" .$all[$i][3]. "</td>";
-                            $output .= "<td>" .$all[$i][4]. "</td>";
+                            $output .= "<td> <a href='javascript:map.panTo(new google.maps.LatLng(".$all[$i][3].",".$all[$i][4]."));map.setZoom(16);' onclick='backtotop();'>" .$all[$i][3].", and ".$all[$i][4]. "</td>";
                             $output .= "<td>" .$all[$i][5]. "</td>";
                           ?>
                             <?php
@@ -50,7 +54,13 @@
 
         </div>
       </div>
-    </div>
-  </body>
-</html>
+
+
 <?php include 'footer.php'; ?>
+<script type="text/javascript">
+
+    var All=<?php echo json_encode( $all ) ?>;
+
+ </script>
+
+<script src="assets/js/maps-reports.js" charset="utf-8"></script>
