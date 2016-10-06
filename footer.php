@@ -64,3 +64,20 @@ $("html, body").animate({ scrollTop: 0 }, "slow");
 
 }
     </script>
+    <script>
+    	function changeMap(){
+    		var sourceURL = window.location.href.split("?")[0];
+    		sourceURL +='?&param='+document.getElementById("quake").value;
+    		 window.location.href= sourceURL;
+    	}
+    	$( document ).ready(function() {
+    	var sourceURL = window.location.href.split("?")[1];
+    	var  type= sourceURL.split("=")[1];
+    	if(sourceURL == 'undefined'){
+    	$('#quake option[value="week"]').attr('selected','selected');
+    	}
+    	else{
+       $('#quake option[value='+type+']').attr('selected','selected');
+       }
+    });
+    </script>
